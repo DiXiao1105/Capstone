@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Explore - TripTrove</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <!-- Tailwind CSS for masonry layout -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+            /* Masonry-like columns for desktop, single column for mobile */
+            .masonry {
+                column-count: 3;
+                column-gap: 1.5rem;
+            }
+            @media (max-width: 900px) {
+                .masonry { column-count: 2; }
+            }
+            @media (max-width: 600px) {
+                .masonry { column-count: 1; }
+            }
+            .masonry-item {
+                break-inside: avoid;
+                margin-bottom: 1.5rem;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <section id="header">
+                <h1><a href="index.html">TripTrove</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current"><a href="explore.html" class="text-red-600">Explore</a></li>
+                        <li><a href="plan.html">Plan a Trip</a></li>
+                        <li><a href="mytrips.html">My Trips</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Main -->
+            <section id="main">
+                <div class="container">
+                    <div class="mb-8 flex justify-center">
+                        <input type="text" placeholder="Search destinations, notes, users..." class="w-full max-w-xl px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400" />
+                    </div>
+                    
+                    <div class="masonry">
+                        
+                        <div class="masonry-item box bg-white rounded-lg shadow p-0 overflow-hidden"
+                        onclick="showPostModal('images/pic06.jpg', `Hiking in New Zealand (Draft)`, `#NewZealand #Hiking`, 0, 0, `Draft: An amazing hiking experience in New Zealand.`)">
+                            <a href="#"><img src="images/pic02.jpg" alt="" class="w-full object-cover" /></a>
+                            <div class="p-4">
+                                <div class="flex items-center mb-2">
+                                    <img src="images/avatar1.jpg" alt="" class="w-8 h-8 rounded-full mr-2" />
+                                    <span class="font-semibold text-sm">Alice</span>
+                                </div>
+                                <h3 class="text-base font-bold mb-1">Discovering Kyoto's Hidden Temples</h3>
+                                <p class="text-sm text-gray-600 mb-2">#Japan #Travel #Temple</p>
+                                <div class="flex text-gray-400 text-xs space-x-4">
+                                    <span>❤️ 120</span>
+                                    <span>💬 8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="masonry-item box bg-white rounded-lg shadow p-0 overflow-hidden">
+                            <a href="#"><img src="images/pic03.jpg" alt="" class="w-full object-cover" /></a>
+                            <div class="p-4">
+                                <div class="flex items-center mb-2">
+                                    <img src="images/avatar2.jpg" alt="" class="w-8 h-8 rounded-full mr-2" />
+                                    <span class="font-semibold text-sm">Bob</span>
+                                </div>
+                                <h3 class="text-base font-bold mb-1">Hiking the Swiss Alps</h3>
+                                <p class="text-sm text-gray-600 mb-2">#Switzerland #Hiking</p>
+                                <div class="flex text-gray-400 text-xs space-x-4">
+                                    <span>❤️ 98</span>
+                                    <span>💬 5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="masonry-item box bg-white rounded-lg shadow p-0 overflow-hidden">
+                            <a href="#"><img src="images/pic04.jpg" alt="" class="w-full object-cover" /></a>
+                            <div class="p-4">
+                                <div class="flex items-center mb-2">
+                                    <img src="images/avatar3.jpg" alt="" class="w-8 h-8 rounded-full mr-2" />
+                                    <span class="font-semibold text-sm">Cathy</span>
+                                </div>
+                                <h3 class="text-base font-bold mb-1">Street Food in Bangkok</h3>
+                                <p class="text-sm text-gray-600 mb-2">#Thailand #Foodie</p>
+                                <div class="flex text-gray-400 text-xs space-x-4">
+                                    <span>❤️ 210</span>
+                                    <span>💬 12</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <section id="footer">
+                <div class="container">
+        			<div class="row">
+           				<div class="col-12">
+                			<section id="footer">
+    							<div class="container">
+        							<div class="footer-contact">
+            							<h2>Contact Us</h2>
+            							<div><strong>Address:</strong> 339 East Chicago Avenue, Chicago, Illinois 60611</div>
+            							<div><strong>Phone:</strong> 3128056663</div>
+            							<div class="footer-email">
+                						<strong>Email:</strong>
+                						<a href="mailto:dixiao2025@u.northwestern.edu">dixiao2025@u.northwestern.edu</a>
+            							</div>
+        							</div>
+        							<div class="copyright">
+            							&copy; 2025 TripTrove. All rights reserved.
+        							</div>
+    							</div>
+							</section>
+            			</div>
+        			</div>
+    			</div>
+			</section>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            // Tab switch logic
+            document.querySelectorAll('.sidebar-link').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Remove active from all links
+                    document.querySelectorAll('.sidebar-link').forEach(function(l) {
+                        l.classList.remove('active', 'text-red-600');
+                    });
+                    // Hide all sections
+                    document.getElementById('my-posts-section').classList.add('hidden');
+                    document.getElementById('favorites-section').classList.add('hidden');
+                    document.getElementById('drafts-section').classList.add('hidden');
+                    // Show selected section
+                    const section = link.getAttribute('data-section');
+                    document.getElementById(section + '-section').classList.remove('hidden');
+                    // Set active class
+                    link.classList.add('active', 'text-red-600');
+                });
+            });
+
+            // Modal logic
+            document.addEventListener('DOMContentLoaded', function() {
+                window.showPostModal = function(img, title, tags, likes, comments, desc) {
+                    document.getElementById('modal-img').src = img;
+                    document.getElementById('modal-title').textContent = title;
+                    document.getElementById('modal-tags').textContent = tags;
+                    document.getElementById('modal-likes').textContent = `❤️ ${likes}`;
+                    document.getElementById('modal-comments').textContent = `💬 ${comments}`;
+                    document.getElementById('modal-desc').textContent = desc;
+                    document.getElementById('post-modal').classList.remove('hidden');
+                };
+                document.getElementById('close-modal').onclick = function(e) {
+                    e.stopPropagation();
+                    document.getElementById('post-modal').classList.add('hidden');
+                };
+                document.getElementById('post-modal').onclick = function(e) {
+                    if (e.target === this) this.classList.add('hidden');
+                };
+            });
+        </script>
+    </body>
+</html>
